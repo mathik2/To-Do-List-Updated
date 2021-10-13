@@ -1,0 +1,68 @@
+h1 {
+  text-align: center;
+  background-color: rgb(241, 241, 162);
+}
+
+#container {
+  height: 10rem;
+  width: 40rem;
+ margin:  auto;
+  
+}
+#storage {
+  width: auto;
+  display:flex;
+  justify-content:center;
+  
+}
+
+#input {
+  height: 3rem;
+  width: 20rem;
+  border: 2px solid black;
+}
+input {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 40rem;
+}
+
+button {
+  height: 1cm;
+  width: 1cm;
+  background-color: chartreuse;
+  font-weight: bolder;
+  border: 3px solid black;
+}
+
+li {
+  display: block;
+  padding: 5px;
+  width: 70rem;
+  height: 2.5rem;
+  background-color: yellow;
+  border: 2px solid black;
+  cursor: pointer;
+
+  font-weight: bold;
+  margin-top: 0.2cm;
+}
+
+#delete,
+#completed,
+#edit {
+  width: 6rem;
+  margin-left: 2rem;
+  float: right;
+}
+#AddButton {
+  width: 6rem;
+  height: 3rem;
+  margin:2rem
+}
+#save {
+  width: 4rem;
+  height: 2rem;
+  margin-left: 1rem;
+  
+}
