@@ -6,14 +6,13 @@ h1 {
 #container {
   height: 10rem;
   width: 40rem;
- margin:  auto;
-  
+  margin: auto;
 }
 #storage {
   width: auto;
-  display:flex;
-  justify-content:center;
-  
+
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #input {
@@ -58,11 +57,10 @@ li {
 #AddButton {
   width: 6rem;
   height: 3rem;
-  margin:2rem
+  margin: 2rem;
 }
 #save {
   width: 4rem;
   height: 2rem;
   margin-left: 1rem;
-  
 }
