@@ -1,22 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do list</title>
-    <link rel="stylesheet" href="to-do list.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern To-Do List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>TO-DO LIST</h1>
-  
-    <p id="container">
-        <input id="input" type="text">
-        <button id="AddButton">Add Task</button>
-    </p>
-    <ol id="storage"></ol>
+  <div class="app">
+    <header>
+      <h1>✨ My To-Do List</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
 
-    <script src="to-do list.js"></script>
+    <div class="task-input">
+      <input id="taskInput" type="text" placeholder="Add a new task...">
+      <input id="taskDate" type="date">
+      <select id="taskCategory">
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Custom">➕ Custom</option>
+      </select>
+      <button id="addTask">Add</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="pending">Pending</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>

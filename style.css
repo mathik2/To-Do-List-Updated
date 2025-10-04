@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+:root {
+  --bg: #f5f5f5;
+  --card: #fff;
+  --text: #333;
+  --accent: #4cafef;
+}
+body.dark {
+  --bg: #181818;
+  --card: #242424;
+  --text: #eee;
+  --accent: #90caf9;
+}
+
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.task-input input, .task-input select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.task-input button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.task-input button:hover {
+  opacity: 0.9;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.filters button {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: var(--card);
+  transition: 0.2s;
+}
+.filters .active {
+  background: var(--accent);
+  color: white;
+}
+
+#taskList {
+  list-style: none;
+}
+.task {
+  background: var(--card);
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.task .info {
+  flex: 1;
+}
+.task small {
+  font-size: 0.8rem;
+  color: gray;
+}
+.task button {
+  margin-left: 0.3rem;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.task button.complete { background: #81c784; }
+.task button.delete { background: #e57373; }
+.task button.edit { background: #64b5f6; }
+
+@media (max-width: 600px) {
+  html, body {
+    overflow: hidden;
+    height: 100%;
+    /* Prevent scrolling */
+  }
+  .app {
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .task-input {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+  .task .info {
+    width: 100%;
+  }
+  .task button {
+    margin-left: 0;
+    margin-right: 0.3rem;
+  }
+}
