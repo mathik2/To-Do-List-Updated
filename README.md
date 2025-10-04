@@ -2,7 +2,7 @@
 
 A modern, responsive, and themeable To-Do List web app built with HTML, CSS, and JavaScript.
 
-![screenshot](./screenshot.png)
+![screenshot](./image.png)
 
 ## ✨ Features
 
@@ -34,7 +34,7 @@ Switch between light and dark mode using the theme button in the header.
 
 | Light Mode | Dark Mode |
 |------------|-----------|
-| ![light](./screenshot-light.png) | ![dark](./screenshot-dark.png) |
+| ![light](./image.png) | ![dark](./dark_mode.png) |
 
 ## 🛠️ Built With
 

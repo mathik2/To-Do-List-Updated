@@ -12,16 +12,20 @@ body {
 }
 
 :root {
-  --bg: #f5f5f5;
-  --card: #fff;
-  --text: #333;
-  --accent: #4cafef;
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #22223b;
+  --accent: #5e60ce;
+  --accent-hover: #3a0ca3;
+  --border: #e0e1dd;
 }
 body.dark {
-  --bg: #181818;
-  --card: #242424;
-  --text: #eee;
-  --accent: #90caf9;
+  --bg: #232946;
+  --card: #1a1a2e;
+  --text: #e0e1dd;
+  --accent: #eebbc3;
+  --accent-hover: #b8c1ec;
+  --border: #393e46;
 }
 
 .app {
@@ -52,8 +56,10 @@ header h1 {
 }
 .task-input input, .task-input select {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
 }
 .task-input button {
   background: var(--accent);
@@ -65,7 +71,8 @@ header h1 {
   transition: 0.2s;
 }
 .task-input button:hover {
-  opacity: 0.9;
+  background: var(--accent-hover);
+  opacity: 1;
 }
 
 .filters {
@@ -80,11 +87,13 @@ header h1 {
   padding: 0.5rem;
   cursor: pointer;
   background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
   transition: 0.2s;
 }
 .filters .active {
   background: var(--accent);
-  color: white;
+  color: #fff;
 }
 
 #taskList {
@@ -98,6 +107,7 @@ header h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid var(--border);
 }
 .task.completed {
   text-decoration: line-through;
@@ -117,9 +127,9 @@ header h1 {
   border-radius: 6px;
   cursor: pointer;
 }
-.task button.complete { background: #81c784; }
-.task button.delete { background: #e57373; }
-.task button.edit { background: #64b5f6; }
+.task button.complete { background: #81c784; color: #fff; }
+.task button.delete { background: #e57373; color: #fff; }
+.task button.edit { background: #64b5f6; color: #fff; }
 
 @media (max-width: 600px) {
   html, body {
